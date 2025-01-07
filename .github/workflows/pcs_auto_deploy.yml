@@ -9,5 +9,5 @@ jobs:
     - name: Build and Publish Docker Image 
       run: | 
           docker login --username aamirali310 --password ${{ secrets.AA_PCS_PAT }} ghcr.io
-          docker build . --tag ghcr.io/aamirali310/python_cheatsheet@latest
-          docker push ghcr.io/aamirali310/python_cheatsheet@latest
+          docker build . --tag ghcr.io/aamirali310/python_cheatsheet:latest
+          docker push ghcr.io/aamirali310/python_cheatsheet:latest
