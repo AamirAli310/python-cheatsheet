@@ -5,7 +5,7 @@ jobs:
   Dkr_Build_And_Publish:
     runs-on: ${{ fromJSON('["ubuntu-latest", "self-hosted"]')[github.repository == 'github/docs-internal'] }}    
     steps:
-    - uses: Actions/checkout@latest
+    - uses: actions/checkout@v4    
     - name: Build and Publish Docker Image 
       run: | 
           docker login --username aamirali310 --password ${{ secrets.AA_PCS_PAT }} ghcr.io
